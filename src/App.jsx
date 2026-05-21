@@ -1,121 +1,125 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+    <div className="app">
+
+      {/* HERO */}
+      <section className="hero">
+        <div className="hero-content">
+          <p className="hero-subtitle">
+            Full-Stack & Flutter Developer
           </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
 
-      <div className="ticks"></div>
+          <h1>
+            Shameen Shetty
+          </h1>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+          <p className="hero-description">
+            Building production-grade systems in ERP, Fintech,
+            Logistics, and Offline-First distributed architectures.
+          </p>
+
+          <div className="hero-buttons">
+            <a
+              href="https://github.com/ShameenShetty"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/shameen-shetty-7648791a4/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+
+            <a href="/resume.pdf">
+              Resume
+            </a>
+          </div>
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      {/* ABOUT */}
+      <section className="section">
+        <h2>About Me</h2>
+
+        <p>
+          I build scalable full-stack and mobile applications with
+          a focus on offline-first systems, synchronization-heavy
+          architectures, and production-ready engineering.
+        </p>
+      </section>
+
+      {/* SKILLS */}
+      <section className="section">
+        <h2>Skills</h2>
+
+        <div className="skills-grid">
+
+          <div className="card">
+            <h3>Languages</h3>
+            <p>C++, Dart, JavaScript, Python, Java</p>
+          </div>
+
+          <div className="card">
+            <h3>Frontend</h3>
+            <p>Flutter, React, HTML, CSS</p>
+          </div>
+
+          <div className="card">
+            <h3>Backend</h3>
+            <p>Node.js, REST APIs</p>
+          </div>
+
+          <div className="card">
+            <h3>Database</h3>
+            <p>MySQL, SQLite</p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section className="section">
+        <h2>Projects</h2>
+
+        <div className="projects-grid">
+
+          <div className="project-card">
+            <h3>TCS – Ticket Collection System</h3>
+
+            <p>
+              Offline-first distributed ticketing system
+              for bus operations.
+            </p>
+
+            <span>
+              Flutter • Node.js • MySQL • SQLite
+            </span>
+          </div>
+
+          <div className="project-card">
+            <h3>Cherp App – Poultry ERP</h3>
+
+            <p>
+              ERP platform for inventory, trading,
+              and financial management.
+            </p>
+
+            <span>
+              Flutter • Node.js • MySQL
+            </span>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
   )
 }
 
