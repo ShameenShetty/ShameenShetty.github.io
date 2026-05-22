@@ -1,114 +1,248 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  /* BACKGROUNDS */
+
+  --bg: #FFFCF5;
+  --bg-alt: #FFF6E0;
+  --surface: #FFFFFF;
+
+  /* TEXT */
+
+  --text: #1C1610;
+  --text-soft: #4A3F33;
+  --text-muted: #8A7B68;
+
+  /* ACCENTS */
+
+  --amber: #F5A800;
+  --amber-deep: #C8820A;
+
+  --red: #C0392B;
+  --red-deep: #962D22;
+
+  /* BORDERS */
+
+  --border: #E5D9C0;
+  --border-strong: #D9CCAF;
+
+  /* SHADOW */
+
+  --shadow:
+    0 10px 30px rgba(28, 22, 16, 0.06);
 }
 
 body {
-    font-family: Inter, sans-serif;
-    background: #0f172a;
-    color: #e2e8f0;
+  font-family: Inter, sans-serif;
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  line-height: 1.7;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: inherit;
 }
 
 .app {
-    width: 100%;
+  width: 100%;
 }
 
 /* HERO */
 
 .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 10%;
+  min-height: 92vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 10%;
 }
 
 .hero-content {
-    max-width: 800px;
+  max-width: 900px;
 }
 
 .hero-subtitle {
-    color: #38bdf8;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+  color: var(--red);
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 1rem;
+
+  text-transform: uppercase;
 }
 
 .hero h1 {
-    font-size: 5rem;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
+  font-size: 5.5rem;
+
+  line-height: 1.02;
+
+  letter-spacing: -3px;
+
+  margin-bottom: 1.5rem;
+
+  color: var(--text);
 }
 
 .hero-description {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #94a3b8;
-    margin-bottom: 2rem;
+  font-size: 1.3rem;
+
+  line-height: 1.9;
+
+  color: var(--text-soft);
+
+  max-width: 750px;
+
+  margin-bottom: 2.5rem;
 }
 
+/* BUTTONS */
+
 .hero-buttons {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+
+  gap: 1rem;
+
+  flex-wrap: wrap;
 }
 
 .hero-buttons a {
-    padding: 0.9rem 1.4rem;
-    border-radius: 10px;
-    background: #1e293b;
-    color: white;
-    transition: 0.2s;
+  padding: 1rem 1.5rem;
+
+  border-radius: 12px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  font-weight: 600;
+
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .hero-buttons a:hover {
-    background: #334155;
+  transform: translateY(-3px);
+
+  border-color: var(--amber);
+
+  box-shadow: var(--shadow);
 }
 
-/* GENERAL SECTION */
+/* SECTIONS */
 
 .section {
-    padding: 6rem 10%;
+  padding: 5rem 10%;
 }
 
 .section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+  font-size: 2.5rem;
+
+  letter-spacing: -1px;
+
+  margin-bottom: 2rem;
+
+  color: var(--text);
 }
 
-/* GRID */
+.section>p {
+  max-width: 850px;
+
+  color: var(--text-soft);
+
+  font-size: 1.1rem;
+
+  line-height: 1.9;
+}
+
+.section:nth-child(even) {
+  background: var(--bg-alt);
+}
+
+/* GRIDS */
 
 .skills-grid,
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 1.5rem;
 }
 
-/* CARDS */
+/* GENERAL CARD */
 
-.card,
-.project-card {
-    background: #1e293b;
-    padding: 2rem;
-    border-radius: 16px;
+.card {
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  padding: 2rem;
+
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
-.card h3,
-.project-card h3 {
-    margin-bottom: 1rem;
+.card:hover {
+  transform: translateY(-4px);
+
+  border-color: var(--border-strong);
+
+  box-shadow: var(--shadow);
 }
 
-.card p,
-.project-card p {
-    color: #94a3b8;
-    line-height: 1.6;
+.card h3 {
+  margin-bottom: 1rem;
+
+  color: var(--text);
 }
 
-.project-card span {
-    display: inline-block;
-    margin-top: 1rem;
-    color: #38bdf8;
+.card p {
+  color: var(--text-soft);
+
+  line-height: 1.8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 0 8%;
+  }
+
+  .section {
+    padding: 4rem 8%;
+  }
+
+  .hero h1 {
+    font-size: 3.8rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
 }

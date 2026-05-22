@@ -1,0 +1,108 @@
+.project-card {
+    display: block;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    padding: 2rem;
+
+    transition:
+        transform 0.15s ease,
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--amber);
+
+    box-shadow: var(--shadow);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+
+    margin-bottom: 1rem;
+
+    color: var(--text);
+}
+
+.project-summary {
+    color: var(--text-soft);
+
+    line-height: 1.8;
+
+    margin-bottom: 1.8rem;
+}
+
+/* COMPONENT SECTION */
+
+.project-section {
+    margin-bottom: 1.5rem;
+}
+
+.project-section h4 {
+    font-size: 0.95rem;
+
+    color: var(--red);
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 0.8rem;
+}
+
+.project-section ul {
+    padding-left: 1.2rem;
+}
+
+.project-section li {
+    margin-bottom: 0.5rem;
+
+    color: var(--text-soft);
+}
+
+/* BADGES */
+
+.project-technologies,
+.project-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.7rem;
+
+    margin-top: 1rem;
+}
+
+.tech-badge,
+.tag-badge {
+    padding: 0.45rem 0.85rem;
+
+    border-radius: 999px;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+}
+
+.tech-badge {
+    background: #FFF1CC;
+
+    color: var(--amber-deep);
+
+    border: 1px solid #F6D88A;
+}
+
+.tag-badge {
+    background: #FBEAE9;
+
+    color: var(--red);
+
+    border: 1px solid #F2C4C1;
+}
