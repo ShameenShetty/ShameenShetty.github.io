@@ -63,11 +63,31 @@ function Home() {
                 </h2>
 
                 <p>
-                    I build scalable full-stack and
-                    mobile applications with a focus
-                    on offline-first systems,
-                    synchronization-heavy architectures,
-                    and production-ready engineering.
+                    I build scalable full-stack and mobile applications
+                    with a focus on offline-first systems,
+                    synchronization-heavy architectures, and
+                    production-ready engineering.
+
+                    <br /><br />
+
+                    I enjoy understanding how real-world operational
+                    problems translate into software systems and
+                    choosing technologies based on the requirements
+                    of the project rather than relying on a single
+                    stack for every use case.
+
+                    <br /><br />
+
+                    My interests include distributed systems,
+                    scalable backend architectures, databases,
+                    synchronization workflows, and exploring tools
+                    specialized for different domains such as
+                    PostgreSQL, TimescaleDB for time-series data,
+                    React-based web platforms for SEO-focused
+                    applications, and Flutter with SQLite for
+                    responsive offline-first mobile systems that
+                    continue functioning reliably even with poor
+                    or unstable internet connectivity.
                 </p>
 
             </section>
