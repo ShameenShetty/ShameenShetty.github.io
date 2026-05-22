@@ -6,11 +6,11 @@ function TCS() {
             <section className="project-hero">
 
                 <p className="project-date">
-                    Oct 2025 – Present
+                    Oct 2025 - Present
                 </p>
 
                 <h1>
-                    TCS – Ticket Collection System
+                    TCS - Ticket Collection System
                 </h1>
 
                 <p className="project-intro">

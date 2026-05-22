@@ -14,11 +14,13 @@ function ProjectCard({
             className="project-card"
             to={link}
         >
-            <h3>{title}</h3>
+            <div className="section-header">
+                <h3>{title}</h3>
 
-            <p className="project-summary">
-                {summary}
-            </p>
+                <p className="project-summary">
+                    {summary}
+                </p>
+            </div>
 
             <div className="project-section">
                 <h4>Components</h4>
